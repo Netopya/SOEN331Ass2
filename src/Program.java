@@ -15,11 +15,28 @@ public class Program {
 		System.out.println("Binary Tree sum of Nodes: " + tree1.sumNodes());
 		
 		//BALANCED BINARY TREE
-		BinTree balancedTree1 = new BinTree(1);
+		BalancedBinTree balancedTree1 = new BalancedBinTree(1);
+		BalancedBinTree balancedTree2 = new BalancedBinTree(2);
+		BalancedBinTree balancedTree3 = new BalancedBinTree(3);
+		BalancedBinTree balancedTree4 = new BalancedBinTree(4);
 		
-		System.out.println("Binary Tree height: " + balancedTree1.height());
-		System.out.println("Binary Tree sum of Nodes: " + balancedTree1.sumNodes());
-
+		balancedTree1.setLeft(balancedTree2);
+		balancedTree1.setRight(balancedTree4);
+		balancedTree2.setLeft(balancedTree3);
+		
+		System.out.println("Balanced Binary Tree is balanced: " + balancedTree1.isBalanced());
+		System.out.println("Balanced Binary Tree height: " + balancedTree1.height());
+		System.out.println("Balanced Binary Tree sum of Nodes: " + balancedTree1.sumNodes());
+		
+		//fail the invariance
+		BalancedBinTree balancedTree5 = new BalancedBinTree(3);
+		BalancedBinTree balancedTree6 = new BalancedBinTree(4);
+		balancedTree3.setLeft(balancedTree5);
+		balancedTree5.setLeft(balancedTree6);
+		//balancedTree1.isBalanced();
+		
+		
+		
 	}
 
 }

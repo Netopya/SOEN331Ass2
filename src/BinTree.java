@@ -3,8 +3,8 @@ import be.ac.ua.ansymo.adbc.annotations.*;
 @invariant("$this.height() != 0")
 public class BinTree {
 
-	private long id;
-	private BinTree left, right;
+	protected long id;
+	protected BinTree left, right;
 	
 	@requires({"id != null"})
 	public BinTree(long id){
@@ -72,5 +72,22 @@ public class BinTree {
 			return 1 + rh;
 			
 	}
+	
+	public boolean isBalanced(){
+		int lh = 0, rh = 0;
+		
+		if(hasLeft())
+			lh = left.height();
+		
+		if(hasRight())
+			rh = right.height();
+		
+		if(Math.abs(lh - rh) <= 1)
+			return true;
+		
+		return false;
+	}
+	
+	
 	
 }
