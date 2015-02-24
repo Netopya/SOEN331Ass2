@@ -88,6 +88,18 @@ public class BinTree {
 		return false;
 	}
 	
+	public boolean isTwoOrNoLeaf(){
+		if(hasLeft() && hasRight())
+			return getLeft().isTwoOrNoLeaf() && getRight().isTwoOrNoLeaf();
+		else if(!hasLeft() && !hasRight())
+			return true;
+		else
+			return false;
+	}
 	
+	public void setLeftRight(BinTree a, BinTree b){
+		this.left = a;
+		this.right = b;		
+	}
 	
 }

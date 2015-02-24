@@ -31,11 +31,22 @@ public class Program {
 		//fail the invariance
 		BalancedBinTree balancedTree5 = new BalancedBinTree(3);
 		BalancedBinTree balancedTree6 = new BalancedBinTree(4);
+		BalancedBinTree balancedTree7 = new BalancedBinTree(4);
 		balancedTree3.setLeft(balancedTree5);
 		balancedTree5.setLeft(balancedTree6);
 		//balancedTree1.isBalanced();
 		
+		//FULL BINARY TREE
+		FullBinaryTree fulltree1 = new FullBinaryTree(1);
+		FullBinaryTree fulltree2 = new FullBinaryTree(2);
+		FullBinaryTree fulltree3 = new FullBinaryTree(3);
+		FullBinaryTree fulltree4 = new FullBinaryTree(4);
 		
+		fulltree1.setLeftRight(fulltree2,fulltree3);
+		System.out.println("Is two or no leaf: " + fulltree1.isTwoOrNoLeaf());
+		
+		//fail the invariance
+		//fulltree2.setLeft(fulltree4);
 		
 	}
 
