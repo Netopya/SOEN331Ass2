@@ -5,12 +5,20 @@ public class Program {
 		//BINARY TREE
 		System.out.println("\nBINARY TREE\n-----------------------------------------");
 		BinTree tree1 = new BinTree(1);
-		BinTree tree2 = new BinTree(3);
+		BinTree tree2 = new BinTree(2);
+		BinTree tree3 = new BinTree(3);
+		BinTree tree4 = new BinTree(4);
+		BinTree tree5 = new BinTree(5);
+		BinTree tree6 = new BinTree(6);
+		BinTree tree7 = null;
 		
-		tree1.setLeft(new BinTree(3));
-		tree1.setRight(tree2);
-		tree2.setLeft(new BinTree(4));
-		tree2.setRight(new BinTree(5));
+		
+		tree1.setLeft(tree2);
+		tree1.setRight(tree3);
+		tree2.setLeft(tree4);
+		tree2.setRight(tree5);
+		//tree1.setLeft(tree6); //FAIL NOT OVERWRITING A NODE
+		//tree3.setLeft(tree7); //FAIL NULL PARAMETER REQUIREMENT
 		
 		System.out.println("Binary Tree height: " + tree1.height());
 		System.out.println("Binary Tree sum of Nodes: " + tree1.sumNodes());
@@ -53,6 +61,8 @@ public class Program {
 		//fulltree2.setLeft(fulltree4); //FAIL THE FULL INVARIANCE
 		
 		System.out.println("Is two or no leaf: " + fulltree1.isTwoOrNoLeaf());
+		System.out.println("Full Binary Tree height: " + fulltree1.height());
+		System.out.println("Full Binary Tree sum of Nodes: " + fulltree1.sumNodes());
 		
 		
 		
@@ -72,6 +82,8 @@ public class Program {
 		//perfectTree2.setLeftRight(perfectTree4, perfectTree5); //FAIL THE SAME HEIGHT INVARIANCE
 		
 		System.out.println("Same height: " + perfectTree1.sameHeight());
+		System.out.println("Perfect Binary Tree height: " + perfectTree1.height());
+		System.out.println("Perfect Binary Tree sum of Nodes: " + perfectTree1.sumNodes());
 		
 	}
 

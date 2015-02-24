@@ -1,6 +1,5 @@
 import be.ac.ua.ansymo.adbc.annotations.invariant;
 
-
 @invariant({"$this.sameHeight()"})
 public class PerfectBinaryTree extends FullBinaryTree{
 

@@ -98,9 +98,10 @@ public class BinTree {
 	}
 	
 	@requires({"a != null","b != null","$this.left == null","$this.right == null"})
+	@ensures({"$this.left != null","$this.right != null","$this.left == a","$this.right == b"})
 	public void setLeftRight(BinTree a, BinTree b){
 		this.left = a;
-		this.right = b;		
+		this.right = b;
 	}
 	
 }
