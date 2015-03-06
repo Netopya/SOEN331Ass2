@@ -1,3 +1,10 @@
+/**
+ * SOEN 331 Assignment 2
+ * 
+ * @author Michael Bilinsky 26992358
+ * @author David Bastien 26948553
+ */
+
 public class Program {
 
 	public static void main(String[] args) {
